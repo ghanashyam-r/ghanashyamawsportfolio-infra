@@ -17,3 +17,7 @@ output "docs_bucket_name" {
   description = "Upload resume and docs here for Phase 2"
   value       = aws_s3_bucket.docs.bucket
 }
+output "chat_api_url" {
+  description = "HTTP API endpoint"
+  value       = aws_apigatewayv2_stage.default.invoke_url
+}
